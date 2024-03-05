@@ -6,6 +6,7 @@ import Hero from "./Components/HeroSection";
 import Skills from "./Components/Skills/Index";
 import Education from "./Components/Education";
 import { BrowserRouter } from "react-router-dom";
+import Projects from "./Components/Projects";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -25,7 +26,6 @@ const Wrapper = styled.div`
     );
 
   width: 100%;
-  clip-path: polygon(0 0, 100% 100%, 30% 98%, 0 100%);
 `;
 function App() {
   return (
@@ -36,6 +36,9 @@ function App() {
           <Hero />
           <Wrapper>
             <Skills />
+          </Wrapper>
+          <Projects />
+          <Wrapper>
             <Education />
           </Wrapper>
         </Body>
