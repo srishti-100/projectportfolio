@@ -5,6 +5,7 @@ import Navbar from "./Components/nAVBAR";
 import Hero from "./Components/HeroSection";
 import Skills from "./Components/Skills/Index";
 import Education from "./Components/Education";
+import Projects from "./Components/Projects";
 import { BrowserRouter } from "react-router-dom";
 
 const Body = styled.div`
@@ -25,8 +26,8 @@ const Wrapper = styled.div`
     );
 
   width: 100%;
-  clip-path: polygon(0 0, 100% 100%, 30% 98%, 0 100%);
 `;
+
 function App() {
   return (
     <ThemeProvider theme={darkTheme}>
@@ -38,6 +39,7 @@ function App() {
             <Skills />
             <Education />
           </Wrapper>
+          <Projects />
         </Body>
       </BrowserRouter>
     </ThemeProvider>
