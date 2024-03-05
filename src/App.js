@@ -4,7 +4,6 @@ import { darkTheme } from "./Utils/Theme";
 import Navbar from "./Components/nAVBAR";
 import Hero from "./Components/HeroSection";
 import Skills from "./Components/Skills/Index";
-import Education from "./Components/Education";
 import Projects from "./Components/Projects";
 import { BrowserRouter } from "react-router-dom";
 
@@ -37,7 +36,6 @@ function App() {
           <Hero />
           <Wrapper>
             <Skills />
-            <Education />
           </Wrapper>
           <Projects />
         </Body>
