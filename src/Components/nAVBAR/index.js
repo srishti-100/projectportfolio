@@ -191,8 +191,8 @@ export default function Navbar() {
         <NavItems>
           <NavLink href="#about">About</NavLink>
           <NavLink href="#skills">Skills</NavLink>
-          <NavLink href="#projects">Projects</NavLink>
           <NavLink href="#education">Education</NavLink>
+          <NavLink href="#projects">Projects</NavLink>
         </NavItems>
         <ButtonContainer>
           <GithubButton>Github Profile</GithubButton>

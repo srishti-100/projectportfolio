@@ -4,7 +4,7 @@ import { darkTheme } from "./Utils/Theme";
 import Navbar from "./Components/nAVBAR";
 import Hero from "./Components/HeroSection";
 import Skills from "./Components/Skills/Index";
-import Education from "./Components/Education";
+import Projects from "./Components/Projects";
 import { BrowserRouter } from "react-router-dom";
 import Projects from "./Components/Projects";
 
@@ -27,6 +27,7 @@ const Wrapper = styled.div`
 
   width: 100%;
 `;
+
 function App() {
   return (
     <ThemeProvider theme={darkTheme}>
@@ -36,11 +37,9 @@ function App() {
           <Hero />
           <Wrapper>
             <Skills />
-          </Wrapper>
-          <Projects />
-          <Wrapper>
             <Education />
           </Wrapper>
+          <Projects />
         </Body>
       </BrowserRouter>
     </ThemeProvider>
