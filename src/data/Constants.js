@@ -1,11 +1,11 @@
+import laCuisine from "../Images/laCousine.png";
+import newsQuest from "../Images/newsQuest.png";
+import textUtils from "../Images/textUtils.png";
+import servir from "../Images/servir.png";
+import summarizegpt from "../Images/summarizeGPT.png";
 export const Bio = {
   name: "Srishti Kulchandani",
-  roles: [
-    "Full Stack Developer",
-    "Android Developer",
-    "UI/UX Designer",
-    "Programmer",
-  ],
+  roles: ["Programmer", "Front-end Developer"],
   description:
     "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
   github: "https://github.com/srishti-100",
@@ -101,8 +101,7 @@ export const projects = [
     title: "LaCuisineV-loce",
     description:
       "A user-friendly website that makes ordering food easy and lets users search and order a variety of food types. Users can effortlessly navigate and place orders. Our site ensures optimal performance and a seamless, responsive design suited for all screen types.",
-    image:
-      "https://github.com/rishavchanda/DecisionHub/raw/master/assets/testRule.jpg",
+    image: laCuisine,
     tags: ["React Js", "HTML", "CSS", "Node Js", "MongoDB", "MaterialUI"],
     projectContribution: "Solo project",
     category: "website",
@@ -114,8 +113,7 @@ export const projects = [
 
     description:
       "NewsQuest is easy-to-use news reading website lets readers read stories in seven different categories: business, science, technology, sports, entertainment, national news, and health. • A responsive application featuring navigation, a news section, and routing to display items in different categories. • It also has the ability to switch between light and dark settings and shows a loading bar while data is being fetched.",
-    image:
-      "https://user-images.githubusercontent.com/64485885/255202416-e1f89b04-2788-45b0-abc2-9dec616669e2.png",
+    image: newsQuest,
     tags: ["React Js", "HTML", "Bootstrap", "MaterialUI", "CSS", "API calls"],
     projectContribution: "Solo project",
     category: "website",
@@ -128,8 +126,7 @@ export const projects = [
 
     description:
       "Introducing a unique meal delivery platform that combines sustainability and compassion - our website not only connects hungry clients with local eateries, but also addresses food waste and supports non-governmental organisations. Restaurants may now easily sell extra food at cheaper prices, reducing waste and increasing accessibility. NGOs can exhibit and sell prepared meals online, benefiting both vendors and socially concerned buyers. Allows appreciating excellent food, reduces waste, and supporting worthy causes.",
-    image:
-      "https://user-images.githubusercontent.com/64485885/255202416-e1f89b04-2788-45b0-abc2-9dec616669e2.png",
+    image: servir,
     tags: ["React Js", "HTML", "Bootstrap", "MaterialUI", "CSS"],
     projectContribution: "Team project",
     category: "website",
@@ -140,8 +137,7 @@ export const projects = [
     title: "TextUtils",
     description:
       "a versatile text modification tool built using React! This project empowers users to manipulate text effortlessly. The interface dynamically adapts to light or dark mode, enhancing user readability. Additionally, the component provides a concise summary of the entered text, showcasing word count, character length, and estimated reading time",
-    image:
-      "https://camo.githubusercontent.com/3ad28aa710d18525f1fc87de056ed53c706d09979589bfd5a773df36653bad38/68747470733a2f2f666972656261736573746f726167652e676f6f676c65617069732e636f6d2f76302f622f6c6f67696e2d65613565322e61707073706f742e636f6d2f6f2f4255434b4f49442532302831292e706e673f616c743d6d6564696126746f6b656e3d32653735376235372d323964372d346263612d613562322d653164346538313432373435",
+    image: textUtils,
     tags: ["React Js", "HTML", "Bootstrap", "MaterialUI", "CSS"],
     projectContribution: "Solo project",
     category: "Website",
@@ -153,8 +149,7 @@ export const projects = [
     title: "SummarizeGPT",
     description:
       "A go-to app for making text shorter and sweeter! Ever had a paragraph that feels a bit too long? Well, this app is here to help. Just type in your text, press the 'Summarize' button, and watch as the app uses some cool tech tricks to give you a quick and easy-to-read summary. It's like having a super-smart buddy who's great at turning lengthy stories into bite-sized nuggets. ",
-    image:
-      "https://camo.githubusercontent.com/3ad28aa710d18525f1fc87de056ed53c706d09979589bfd5a773df36653bad38/68747470733a2f2f666972656261736573746f726167652e676f6f676c65617069732e636f6d2f76302f622f6c6f67696e2d65613565322e61707073706f742e636f6d2f6f2f4255434b4f49442532302831292e706e673f616c743d6d6564696126746f6b656e3d32653735376235372d323964372d346263612d613562322d653164346538313432373435",
+    image: summarizegpt,
     tags: ["React Js", "HTML", "Bootstrap", "MaterialUI", "CSS", "API calls"],
     projectContribution: "Team project",
     category: "Website",
