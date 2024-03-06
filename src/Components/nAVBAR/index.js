@@ -4,6 +4,7 @@ import styled, { useTheme } from "styled-components";
 import { DiCssdeck } from "react-icons/di";
 import { useState } from "react";
 import { FaBars } from "react-icons/fa";
+import { Bio } from "../../data/Constants";
 
 const Nav = styled.div`
   background-color: ${({ theme }) => theme.card_light};
@@ -195,7 +196,9 @@ export default function Navbar() {
           <NavLink href="#education">Education</NavLink>
         </NavItems>
         <ButtonContainer>
-          <GithubButton>Github Profile</GithubButton>
+          <GithubButton href={Bio.github} target="_blank">
+            Github Profile
+          </GithubButton>
         </ButtonContainer>
       </NavContainer>
       {open && (
@@ -247,7 +250,7 @@ export default function Navbar() {
               color: "white",
               width: "max-content",
             }}
-            href="/"
+            href={Bio.github}
             target="_blank"
           >
             Github Profile
