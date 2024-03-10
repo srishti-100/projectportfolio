@@ -16,7 +16,8 @@ const Body = styled.div`
 const Wrapper = styled.div`
   background: linear-gradient(
       38.7deg,
-      rgba(204, 0, 187, 0.15) 0%,
+      rgba(0, 45, 98, 1) 0%,
+      //pink
       rgba(201, 32, 184, 0) 50%
     ),
     linear-gradient(

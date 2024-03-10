@@ -158,16 +158,16 @@ const ResumeButton = styled.a`
     max-width: 300px;
     text-align: center;
     padding: 16px 0;
-    color:${({ theme }) => theme.white};
+    color:white;
     border-radius: 20px;
     cursor: pointer;
     font-size: 20px;
     font-weight: 600;
     transition: all 0.2s ease-in-out !important;
-    background: hsla(271, 100%, 50%, 1);
-    background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+    background: hsla(212.45, 100%, 19.22%, 1);
+  background: linear-gradient(225deg, hsla(212.45, 100%, 19.22%, 1) 0%, hsla(215.58, 95.29%, 71.37%, 1) 100%);
+  background: -moz-linear-gradient(225deg, hsla(212.45, 100%, 19.22%, 1) 0%, hsla(215.58, 95.29%, 71.37%, 1) 100%);
+  background: -webkit-linear-gradient(225deg, hsla(212.45, 100%, 19.22%, 1) 0%, hsla(215.58, 95.29%, 71.37%, 1) 100%);
     box-shadow:  20px 20px 60px #1F2634,
     -20px -20px 60px #1F2634;
     &:hover {
@@ -176,6 +176,11 @@ const ResumeButton = styled.a`
     box-shadow:  20px 20px 60px #1F2634,
     filter: brightness(1);
     }    
+
+    
+// hsla(206.75, 92.16%, 69.8%, 1)
+// hsla(203.29, 89.8%, 68.63%, 1)
+// hsla(206.82, 88.61%, 67.84%, 1)
     
     
     @media (max-width: 640px) {
