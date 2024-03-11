@@ -1,6 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
+const handleClick = (link) => {
+  window.open(link, "_blank");
+};
+
 const Button = styled.button`
   display: none;
   width: 100%;
@@ -105,9 +109,9 @@ const Description = styled.div`
   text-overflow: ellipsis;
 `;
 
-const ProjectCards = ({ project, setOpenModal }) => {
+const ProjectCards = ({ project }) => {
   return (
-    <Card onClick={() => setOpenModal({ state: true, project: project })}>
+    <Card onClick={() => handleClick(project.github)}>
       <Image src={project.image} />
       <Tags>
         {project.tags?.map((tag, index) => (
@@ -120,7 +124,7 @@ const ProjectCards = ({ project, setOpenModal }) => {
         <Description>{project.description}</Description>
       </Details>
       <ProjectContri>{project.projectContribution}</ProjectContri>
-      {/* <Button>View Project</Button> */}
+      {/* <Button >View Project</Button> */}
     </Card>
   );
 };

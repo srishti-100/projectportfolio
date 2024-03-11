@@ -7,6 +7,7 @@ import Skills from "./Components/Skills/Index";
 import Projects from "./Components/Projects";
 import { BrowserRouter } from "react-router-dom";
 import Education from "./Components/Education";
+import ContactMe from "./Components/ContactMe";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -30,6 +31,17 @@ const Wrapper = styled.div`
 `;
 
 function App() {
+  // function Section({ id }) {
+  //   const location = useLocation();
+
+  //   useEffect(() => {
+  //     const element = document.getElementById(id);
+  //     if (element) {
+  //       element.scrollIntoView({ behavior: 'smooth' });
+  //     }
+  //   }, [id, location]);
+  // }
+
   return (
     <ThemeProvider theme={darkTheme}>
       <BrowserRouter>
@@ -44,6 +56,7 @@ function App() {
             <Education />
           </Wrapper>
         </Body>
+        <ContactMe />
       </BrowserRouter>
     </ThemeProvider>
   );

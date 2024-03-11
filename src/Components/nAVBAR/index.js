@@ -5,6 +5,8 @@ import { DiCssdeck } from "react-icons/di";
 import { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { Bio } from "../../data/Constants";
+import { useEffect } from "react";
+import { useRef } from "react";
 
 const Nav = styled.div`
   background-color: ${({ theme }) => theme.card_light};
@@ -17,7 +19,7 @@ const Nav = styled.div`
   top: 0;
   z-index: 10;
   @media (max-width: 960px) {
-    trastion: 0.8s all ease;
+    transtion: 0.8s all ease;
   }
 `;
 
@@ -145,7 +147,7 @@ const MobileMenu = styled.div`
   border-radius: 0 0 20px 20px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   opacity: ${({ open }) => (open ? "100%" : "0")};
-  z-index: ${({ open }) => (open ? "1000" : "-1000")};
+  z-index: ${({ open }) => (open ? "1004" : "-1000")};
 `;
 
 const MobileMenuLinks = styled(LinkR)`
@@ -165,9 +167,43 @@ const MobileMenuLinks = styled(LinkR)`
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [targetId, setTargetId] = React.useState(null);
+  const node = useRef();
+
+  useEffect(() => {
+    if (targetId) {
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
+      setTargetId(null);
+    }
+  }, [targetId]);
+
+  const handleOutsideClick = (e) => {
+    if (node.current.contains(e.target)) {
+      // Inside click
+      return;
+    }
+    // Outside click
+    setOpen(false);
+  };
+
+  useEffect(() => {
+    if (open) {
+      document.addEventListener("mousedown", handleOutsideClick);
+    } else {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, [open]);
+
   const theme = useTheme();
   return (
-    <Nav>
+    <Nav ref={node}>
       <NavContainer>
         <NavLogo to="/">
           <a
@@ -194,6 +230,7 @@ export default function Navbar() {
           <NavLink href="#skills">Skills</NavLink>
           <NavLink href="#projects">Projects</NavLink>
           <NavLink href="#education">Education</NavLink>
+          <NavLink href="#contact">Contact</NavLink>
         </NavItems>
         <ButtonContainer>
           <GithubButton href={Bio.github} target="_blank">
@@ -204,45 +241,62 @@ export default function Navbar() {
       {open && (
         <MobileMenu open={open}>
           <MobileMenuLinks
-            href="#about"
+            to="/#about"
             onClick={() => {
-              setOpen(!open);
+              if (open) {
+                setOpen(!open);
+              }
+              setTargetId("about");
             }}
           >
             About
           </MobileMenuLinks>
           <MobileMenuLinks
-            href="#skills"
+            to="/#skills"
             onClick={() => {
-              setOpen(!open);
+              if (open) {
+                setOpen(!open);
+              }
+              setTargetId("skills");
             }}
           >
             Skills
           </MobileMenuLinks>
+
           <MobileMenuLinks
-            href="#experience"
+            to="/#projects"
             onClick={() => {
-              setOpen(!open);
-            }}
-          >
-            Experience
-          </MobileMenuLinks>
-          <MobileMenuLinks
-            href="#projects"
-            onClick={() => {
-              setOpen(!open);
+              if (open) {
+                setOpen(!open);
+              }
+              setTargetId("projects");
             }}
           >
             Projects
           </MobileMenuLinks>
           <MobileMenuLinks
-            href="#education"
+            to="/#education"
             onClick={() => {
-              setOpen(!open);
+              if (open) {
+                setOpen(!open);
+              }
+              setTargetId("education");
             }}
           >
             Education
           </MobileMenuLinks>
+          <MobileMenuLinks
+            to="/#contact"
+            onClick={() => {
+              if (open) {
+                setOpen(!open);
+              }
+              setTargetId("contact");
+            }}
+          >
+            Contact
+          </MobileMenuLinks>
+
           <GithubButton
             style={{
               padding: "10px 16px",

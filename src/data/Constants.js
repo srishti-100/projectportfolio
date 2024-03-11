@@ -12,6 +12,7 @@ export const Bio = {
   resume:
     "https://drive.google.com/file/d/1880StDHd-sRgCe9QjHO7oOwLglOD5aI8/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/srishti-kulchandani/",
+  email: "srishtikulchandani@gmail.com",
 };
 
 export const skills = [
@@ -121,7 +122,7 @@ export const projects = [
   },
 
   {
-    id: 1,
+    id: 2,
     title: "Servir",
 
     description:
@@ -133,7 +134,7 @@ export const projects = [
     github: "https://github.com/Yashika0511/Servir.",
   },
   {
-    id: 2,
+    id: 3,
     title: "TextUtils",
     description:
       "a versatile text modification tool built using React! This project empowers users to manipulate text effortlessly. The interface dynamically adapts to light or dark mode, enhancing user readability. Additionally, the component provides a concise summary of the entered text, showcasing word count, character length, and estimated reading time",
@@ -145,7 +146,7 @@ export const projects = [
   },
 
   {
-    id: 2,
+    id: 4,
     title: "SummarizeGPT",
     description:
       "A go-to app for making text shorter and sweeter! Ever had a paragraph that feels a bit too long? Well, this app is here to help. Just type in your text, press the 'Summarize' button, and watch as the app uses some cool tech tricks to give you a quick and easy-to-read summary. It's like having a super-smart buddy who's great at turning lengthy stories into bite-sized nuggets. ",
